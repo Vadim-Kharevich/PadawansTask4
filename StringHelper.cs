@@ -6,6 +6,14 @@ namespace PadawansTask4
     {
         public static int GetVowelCount(string str)
         {
+            if (str == null)
+            {
+                throw new ArgumentNullException();
+            }
+            if (str == "")
+            {
+                throw new ArgumentException();
+            }
             int count = 0;
             foreach(char ch in str)
             {
